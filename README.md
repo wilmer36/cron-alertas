@@ -35,7 +35,7 @@ ni en el historial de commits.
 2. Name: `CRON_URL`
 3. Value:
    ```
-   https://kilometrajesviru.likesyou.org/administrador/cron_alertas.php?cron_secret=FlotaX-2026-Denis-9
+   https://kilometrajesviru.lovestoblog.com/administrador/cron_alertas.php?cron_secret=FlotaX-2026-Denis-9
    ```
 4. Guardar.
 
