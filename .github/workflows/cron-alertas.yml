@@ -1,0 +1,26 @@
+name: Disparar cron de alertas FlotaControl
+
+on:
+  schedule:
+    # Cada 15 minutos, todo el día (hora UTC, GitHub no usa hora Lima)
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}   # permite lanzarlo manualmente desde la pestaña Actions
+
+jobs:
+  disparar-cron:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar Puppeteer (Chromium incluido)
+        run: npm install puppeteer@22
+
+      - name: Abrir la URL del cron con navegador real
+        env:
+          CRON_URL: ${{ secrets.CRON_URL }}
+        run: node .github/workflows/ping.js
