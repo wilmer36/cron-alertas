@@ -2,8 +2,9 @@ name: Disparar cron de alertas FlotaControl
 
 on:
   schedule:
-    # Cada 15 minutos, todo el día (hora UTC, GitHub no usa hora Lima)
-    - cron: '*/15 * * * *'
+    # Cada 5 minutos, todo el día (hora UTC, GitHub no usa hora Lima).
+    # Es el mínimo que permite GitHub Actions; no hay forma de bajar de esto.
+    - cron: '*/5 * * * *'
   workflow_dispatch: {}   # permite lanzarlo manualmente desde la pestaña Actions
 
 jobs:
