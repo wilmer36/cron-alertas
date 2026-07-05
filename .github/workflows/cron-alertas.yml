@@ -4,7 +4,7 @@ on:
   schedule:
     # Cada 5 minutos, todo el día (hora UTC, GitHub no usa hora Lima).
     # Es el mínimo que permite GitHub Actions; no hay forma de bajar de esto.
-    - cron: '*/5 * * * *'
+    - cron: '3,8,13,18,23,28,33,38,43,48,53,58 * * * *'
   workflow_dispatch: {}   # permite lanzarlo manualmente desde la pestaña Actions
 
 jobs:
