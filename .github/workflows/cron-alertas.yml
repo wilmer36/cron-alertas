@@ -12,10 +12,13 @@ jobs:
     timeout-minutes: 3
 
     steps:
+      - name: Descargar el código del repositorio
+        uses: actions/checkout@v4
+
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Instalar Puppeteer (Chromium incluido)
         run: npm install puppeteer@22
